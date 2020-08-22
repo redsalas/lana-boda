@@ -1,0 +1,55 @@
+body
+html {
+    background-color: #FFFFFF;
+}
+
+/* .main-wrapper {
+    position: relative;
+} */
+
+.pre-loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.pre-loader span {
+    height: 2em;
+    width: 2em;
+    color: #B19A56;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: wave 2s ease-in-out infinite;
+}
+
+.pre-loader span:nth-child(1) {
+    left: -4.5em;
+    animation-delay: 0s;
+}
+
+.pre-loader span:nth-child(2) {
+    left: -1.5em;
+    animation-delay: 0.1s;
+}
+
+.pre-loader span:nth-child(3) {
+    left: 1.5em;
+    animation-delay: 0.2s;
+}
+
+.pre-loader span:nth-child(4) {
+    left: 4.5em;
+    animation-delay: 0.3s;
+}
+
+@keyframes wave {
+    0%,
+    75%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+    25% {
+        transform: translateY(2.5em);
+    }
+}
