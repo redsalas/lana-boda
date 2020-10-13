@@ -144,7 +144,7 @@
 		TweetJs.Search("#BodaLana", data => { 
 			if(data.statuses.length >= 1) {
 				for(let i = 0; i < data.statuses.length; i++) {
-					let img = data.statuses[i].user.profile_image_url.replace('normal.jpg', '400x400.jpg');
+					let img = data.statuses[i].user.profile_image_url_https.replace('normal.jpg', '400x400.jpg');
 					let tweet = `<div class="item"><div class="testimony-slide active text-center">`+
 								`<figure><img src="${img}" alt="user"></figure>`+
 								`<span>${data.statuses[i].user.name}, via <a href="https://twitter.com/${data.statuses[i].user.screen_name}" class="twitter">Twitter</a></span>`+
