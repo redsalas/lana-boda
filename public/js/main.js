@@ -140,18 +140,32 @@
 
 	};
 
+	var loadingTweets = function(){
+		TweetJs.Search("#BodaLana", data => { 
+			if(data.statuses.length >= 1) {
+				for(let i = 0; i < data.statuses.length; i++) {
+					let img = data.statuses[i].user.profile_image_url.replace('normal.jpg', '400x400.jpg');
+					let tweet = `<div class="item"><div class="testimony-slide active text-center">`+
+								`<figure><img src="${img}" alt="user"></figure>`+
+								`<span>${data.statuses[i].user.name}, via <a href="https://twitter.com/${data.statuses[i].user.screen_name}" class="twitter">Twitter</a></span>`+
+								`<blackquote><p>${data.statuses[i].text}</p></blackquote>`+
+								`</div></div>`;
+					$("#tweets").append(tweet);
+				}
+			}
 
-	var testimonialCarousel = function(){
-		var owl = $('.owl-carousel-fullwidth');
-		owl.owlCarousel({
-			items: 1,
-			loop: true,
-			margin: 0,
-			responsiveClass: true,
-			nav: false,
-			dots: true,
-			smartSpeed: 800,
-			autoHeight: true,
+			// Load Carousel
+			var owl = $('.owl-carousel-fullwidth');
+			owl.owlCarousel({
+				items: 1,
+				loop: true,
+				margin: 0,
+				responsiveClass: true,
+				nav: false,
+				dots: true,
+				smartSpeed: 800,
+				autoHeight: true,
+			});
 		});
 	};
 
@@ -215,13 +229,13 @@
 
 	
 	$(function(){
+		loadingTweets();
 		mobileMenuOutsideClick();
 		parallax();
 		offcanvasMenu();
 		burgerMenu();
 		contentWayPoint();
 		dropdown();
-		testimonialCarousel();
 		goToTop();
 		loaderPage();
 		counter();

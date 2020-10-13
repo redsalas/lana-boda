@@ -405,49 +405,21 @@
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 						<span>Nuestros Deseos</span>
 						<h2>Deseos de Amigos</h2>
+						<h3>Manda un mensaje 
+							<a href="https://twitter.com/intent/tweet?button_hashtag=BodaLana&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="true">Tweet #BodaLana</a>
+							<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+						</h3>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-12 animate-box">
 						<div class="wrap-testimony">
-							<div class="owl-carousel-fullwidth">
-								<div class="item">
-									<div class="testimony-slide active text-center">
-										<figure>
-											<img src="images/friend-1.jpg" alt="user">
-										</figure>
-										<span>Jorge Salas, via <a href="https://twitter.com/Red_Salas" class="twitter">Twitter</a></span>
-										<blockquote>
-											<p>"Aquí iran tweets de la gente que usten #BodaLana o algo así."</p>
-										</blockquote>
-									</div>
-								</div>
-								<div class="item">
-									<div class="testimony-slide active text-center">
-										<figure>
-											<img src="images/friend-2.jpg" alt="user">
-										</figure>
-										<span>Alberto Isai, via <a href="https://twitter.com/isai1isai2" class="twitter">Twitter</a></span>
-										<blockquote>
-											<p>"Meow así es."</p>
-										</blockquote>
-									</div>
-								</div>
-								<div class="item">
-									<div class="testimony-slide active text-center">
-										<figure>
-											<img src="images/friend-3.jpg" alt="user">
-										</figure>
-										<span>Jonathan Alonso, via <a href="https://www.facebook.com/jonathanfrancisco1996" class="facebook">Facebook</a></span>
-										<blockquote>
-											<p>"Vamos a pistear."</p>
-										</blockquote>
-									</div>
-								</div>
-								</div>
+							<div id="tweets" class="owl-carousel-fullwidth">
+
 							</div>
 						</div>
 					</div>
+				</div>
 				</div>
 			</div>
 		</div>
@@ -583,7 +555,8 @@
 	<!-- Magnific Popup -->
 	<script src="js/jquery.magnific-popup.min.js"></script>
 	<script src="js/magnific-popup-options.js"></script>
-
+	<!-- TwitterJS -->
+	<script src="js/tweetjs.js"></script>
 	<!-- // <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script> -->
 	<script src="js/simplyCountdown.js"></script>
 	<!-- Main -->
@@ -591,9 +564,7 @@
 
 	<script>
     var d = new Date('November 20, 2020 18:00:00');
-	console.log(d);
-
-    // default example
+	
     simplyCountdown('.simply-countdown-one', {
         year: d.getFullYear(),
         month: d.getMonth() + 1,
