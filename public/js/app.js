@@ -19,7 +19,7 @@ $(document).ready(function() {
         });
       });
 
-    let swiper = new Swiper('.swiper-container', {
+    /* let swiper = new Swiper('.swiper-container', {
         // Optional parameters
         direction: 'horizontal',
         loop: true,
@@ -37,5 +37,5 @@ $(document).ready(function() {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         }
-    });
+    }); */
 });
