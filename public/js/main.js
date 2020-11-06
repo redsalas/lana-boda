@@ -141,7 +141,8 @@
 	};
 
 	var loadingTweets = function(){
-		TweetJs.Search("#BodaLana", data => { 
+		TweetJs.Search("BodaLana", data => { 
+			console.log(data);
 			if(data.statuses.length >= 1) {
 				for(let i = 0; i < data.statuses.length; i++) {
 					let img = data.statuses[i].user.profile_image_url_https.replace('normal.jpg', '400x400.jpg');
@@ -229,7 +230,7 @@
 
 	
 	$(function(){
-		loadingTweets();
+		//loadingTweets();
 		mobileMenuOutsideClick();
 		parallax();
 		offcanvasMenu();
